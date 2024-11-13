@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>javascript30_17</title>
+</head>
+<body>
+<script>
+    const bands=["A Car","A Boat","the cat","We are","Let them go","A house","An accident","A zebra","Home","Currently busy"];
+    function strip(bandName){
+        return bandName.replace(/^(a |the |an )/i,'').trim();
+    }
+    const sortedBands=bands.sort(function(a,b){
+        if(strip(a)>strip(b)){
+            return 1;
+        } else {
+            return -1;
+        }
+    });
+    console.log(sortedBands);
+</script>
+</body>
+</html>
